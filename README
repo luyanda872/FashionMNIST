@@ -1,0 +1,68 @@
+# FashionMNIST Classifier
+
+
+Author: Luyanda  
+Student Email: MBLLUY007@myuct.ac.za
+
+This project implements a multi-class image classifier for the FashionMNIST dataset using artificial neural networks (ANNs) in PyTorch.
+
+------------------------------------------------------------
+FILES INCLUDED
+------------------------------------------------------------
+
+1. ## classifier.py  
+     Main Python script that:
+   • Loads and pre-processes the FashionMNIST dataset  
+   • Defines the ANN model with variable depth and dropout  
+   • Trains the model using CrossEntropy loss and Adam optimizer  
+   • Evaluates performance on a held-out test set  
+   • Supports user interaction for image classification via the command line  
+
+2. ## requirements.txt  
+     Lists all Python packages required to run this project:  
+   • torch  
+   • torchvision  
+   • numpy  
+   • matplotlib  
+
+   Install them with:
+   > pip install -r requirements.txt
+
+3. ## Makefile  
+     Provides convenient one-command project setup and execution:
+   • `make install` – installs all required packages  
+   • `make run`     – runs the classifier.py script
+
+------------------------------------------------------------
+HOW TO USE
+------------------------------------------------------------
+
+To install dependencies and run the program:
+
+> make install  
+> make run  
+
+Or manually:
+
+> pip install -r requirements.txt  
+> python classifier.py
+
+When running, the script:
+• Trains a neural network on FashionMNIST (with early stopping)
+• Prints final test accuracy
+• Allows users to classify a `.jpg` image by typing its path
+• Supports `"exit"` command to end the session
+
+Example:
+> Please enter a filepath:  
+> ./images/dress.jpg  
+> Classifier: Dress
+
+------------------------------------------------------------
+NOTES
+------------------------------------------------------------
+
+• Make sure the data (FashionMNIST) is on the same directory as the classifier.py  
+• Image classification works with 28x28 grayscale `.jpg` images.
+
+------------------------------------------------------------
